@@ -1,0 +1,32 @@
+# Generated lexer and parser sources
+lex.yy.c
+y.tab.c
+y.tab.h
+y.output
+y.gv
+y.vcg
+*.tab.c
+*.tab.h
+
+# Compiled binaries produced by build.sh
+phases/1-lexical-analysis/lexer
+phases/2-advanced-lexer/lexer
+phases/3-syntactic-analysis/calc
+phases/4-abstract-syntax/petit
+phases/5-semantic-analysis/petit
+phases/6-code-generation/petit
+
+# Object files, assembly and LLVM IR
+*.o
+*.s
+*.ll
+
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz

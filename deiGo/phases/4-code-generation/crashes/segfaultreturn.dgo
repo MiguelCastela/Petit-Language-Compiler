@@ -1,0 +1,25 @@
+// EXPECTED TO CRASH (STACK OVERFLOW)
+
+
+
+
+
+package main;
+
+func first(a int) int {
+    return second(a) + 1;
+}
+
+func second(a int) int {
+    return third(a) - 1;
+}
+
+func third(a int) int {
+    return first(a) * 2;
+}
+
+func main() {
+    var result int;
+    result = first(3);
+    fmt.Println("Result of cyclic functions: ");
+}

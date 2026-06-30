@@ -1,0 +1,32 @@
+###########################################################
+
+func {
+[...]
+L1end:
+  br label %return
+  br label %L0cond
+L0end:
+return:
+  ret i32 0
+}
+
+This is getting a missing opcode in the return label
+as every branch must end either in a ret or br instruction
+(L0end is empty)
+
+We need to keep track of an has_returned_branch variable for
+EVERY branch in order to add "br label %return%" at the end 
+of the L0 branch 
+
+Maybe keep a dynamic stack with a node per nested branch
+we only set has_returned_function to 1 if the stack is empty
+and a return instruction is called 
+
+###########################################################
+
+DON'T FORGET TO ALSO ADD THE STACK OPERATIONS IN codegen_main()
+
+###########################################################
+
+WRONG ANSWER ON B IS LIKELY DUE TO SPECIAL NOTATIONS FOR NATURALS
+AND DECIMALS

@@ -1,14 +1,16 @@
 # Petit Language Compiler
 
-A compiler for **Petit**, a small functional-style language, built incrementally
-as the project for the Compilers course (2024/25) at the Department of
-Informatics Engineering, University of Coimbra. The compiler is written in C
-using Lex (Flex) and Yacc (Bison), and it generates LLVM intermediate
-representation as its final output.
+This repository collects compiler construction work from the Compilers course
+(2024/25) at the Department of Informatics Engineering, University of Coimbra.
+It contains two independent compilers:
 
-The project is organized as six phases. Each phase builds on the previous one and
-adds a new stage of a classic compiler pipeline, from lexical analysis through to
-code generation.
+- **Petit** (this top level): a small functional-style language built across the
+  practical classes. Written in C with Lex (Flex) and Yacc (Bison), it generates
+  LLVM intermediate representation.
+- **deiGo** (in [`deiGo/`](deiGo/)): the graded course project, a compiler for a
+  subset of the Go language. See [`deiGo/README.md`](deiGo/README.md) for details.
+
+The rest of this file describes the Petit compiler.
 
 ## The Petit language
 
@@ -43,20 +45,20 @@ Sample programs live in [`examples/`](examples/).
 ├── README.md
 ├── .gitignore
 ├── .gitattributes
-├── docs/
-│   └── report/                 Project report (LaTeX source, PDF, figures)
 ├── examples/                   Sample Petit programs (.pt)
-└── phases/
-    ├── 1-lexical-analysis/     Lexer for the base token set (Lex)
-    ├── 2-advanced-lexer/       Lexer with comments and extended rules
-    ├── 3-syntactic-analysis/   Yacc grammar (calculator exercise)
-    ├── 4-abstract-syntax/      Parser building an abstract syntax tree
-    ├── 5-semantic-analysis/    Type checking and symbol tables
-    └── 6-code-generation/      LLVM IR generation (full compiler)
+├── phases/                     The Petit compiler, stage by stage
+│   ├── 1-lexical-analysis/     Lexer for the base token set (Lex)
+│   ├── 2-advanced-lexer/       Lexer with comments and extended rules
+│   ├── 3-syntactic-analysis/   Yacc grammar (calculator exercise)
+│   ├── 4-abstract-syntax/      Parser building an abstract syntax tree
+│   ├── 5-semantic-analysis/    Type checking and symbol tables
+│   └── 6-code-generation/      LLVM IR generation (full compiler)
+└── deiGo/                      The deiGo course project (separate compiler)
 ```
 
-The final, complete compiler is in [`phases/6-code-generation/`](phases/6-code-generation/).
-Earlier phases are kept as milestones that show how the compiler was built up.
+The final, complete Petit compiler is in
+[`phases/6-code-generation/`](phases/6-code-generation/). Earlier phases are kept
+as milestones that show how the compiler was built up.
 
 ## The phases
 
@@ -69,8 +71,8 @@ Earlier phases are kept as milestones that show how the compiler was built up.
 | 5 | `5-semantic-analysis` | Adds symbol tables and type checking (`semantics.c`, `semantics.h`). |
 | 6 | `6-code-generation` | Emits LLVM IR for a checked program (`codegen.c`, `codegen.h`). |
 
-Each phase that ships a `build.sh` also includes the original assignment
-specification as a PDF in the same directory.
+Phases 4, 5, and 6 also include the original assignment specification as a PDF in
+the same directory.
 
 ## Requirements
 
@@ -127,11 +129,13 @@ clang factorial.ll io.o -o factorial
 The `factorial` program reads an integer from standard input and prints its
 factorial.
 
-## Report
+## The deiGo project
 
-A full write-up of the project, covering the grammar design, abstract syntax
-tree, semantic analysis, and code generation, is in
-[`docs/report/`](docs/report/) as both LaTeX source and a compiled PDF.
+The graded project for the same course lives in [`deiGo/`](deiGo/). It is a
+separate compiler for a subset of Go, organized into four stages of its own
+(lexical, syntax, semantic, and code generation), with a full report and test
+suites. The project report, which documents the design of the deiGo compiler, is
+in [`deiGo/report/`](deiGo/report/).
 
 ## Authors
 

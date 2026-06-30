@@ -1,0 +1,12 @@
+package main; 
+
+func f0(){}
+
+func main (f0 int, f0 float32, f0 int){
+    var a int;
+    a = a+f0();
+    a = f0();
+
+    fmt.Println(f0());
+
+}

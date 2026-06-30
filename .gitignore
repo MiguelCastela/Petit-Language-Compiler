@@ -1,28 +1,28 @@
 # Generated lexer and parser sources
 lex.yy.c
-y.tab.c
-y.tab.h
+*.tab.c
+*.tab.h
 y.output
 y.gv
 y.vcg
-*.tab.c
-*.tab.h
 
-# Compiled binaries produced by build.sh
-phases/1-lexical-analysis/lexer
-phases/2-advanced-lexer/lexer
-phases/3-syntactic-analysis/calc
-phases/4-abstract-syntax/petit
-phases/5-semantic-analysis/petit
-phases/6-code-generation/petit
+# Compiled compiler binaries produced by build scripts
+petit
+gocompiler
+lexer
+calc
 
 # Object files, assembly and LLVM IR
 *.o
 *.s
 *.ll
 
-# macOS
+# Archives produced by build scripts
+gocompiler.zip
+
+# macOS and editor files
 .DS_Store
+.vscode/
 
 # LaTeX build artifacts
 *.aux

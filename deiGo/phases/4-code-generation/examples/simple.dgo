@@ -1,0 +1,14 @@
+package main
+
+func f(n int) int {
+	return n-1;
+}
+
+func main() {
+	var a, b int;
+	a = 10;
+	b = a + 1;
+	fmt.Println(b);
+	fmt.Println(f(1));
+}
+	

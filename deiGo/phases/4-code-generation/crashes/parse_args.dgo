@@ -1,0 +1,20 @@
+package main;
+
+func f(arg int){
+    arg,_ = strconv.Atoi(os.Args[1]);
+}
+
+var s string;
+var arg int;
+func main() {
+    var arg int;
+	{
+		arg,_ = strconv.Atoi(os.Args[1]);
+        arg,_ = strconv.Atoi(os.Args[s]);
+		//arg = 2;
+		//arg = 2;
+	}
+	fmt.Println("Vou embora");
+    fmt.Println(s);
+    fmt.Println(arg);
+}

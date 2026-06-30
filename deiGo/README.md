@@ -134,5 +134,5 @@ compiled PDF, and Markdown.
 
 ## Authors
 
-- Miguel Castela (uc2022212972)
-- Nuno Batista (uc2022216127)
+- Miguel Castela 
+- Nuno Batista 

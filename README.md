@@ -139,7 +139,12 @@ in [`deiGo/report/`](deiGo/report/).
 
 ## Authors
 
+<<<<<<< Updated upstream
 - Miguel Castela 
 - Nuno Batista 
+=======
+- Miguel Castela
+- Nuno Batista
+>>>>>>> Stashed changes
 
 Developed for the Compilers course, 2024/25, University of Coimbra.

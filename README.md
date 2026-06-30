@@ -139,7 +139,7 @@ in [`deiGo/report/`](deiGo/report/).
 
 ## Authors
 
-- Miguel Castela (uc2022212972)
-- Nuno Batista (uc2022216127)
+- Miguel Castela 
+- Nuno Batista 
 
 Developed for the Compilers course, 2024/25, University of Coimbra.
